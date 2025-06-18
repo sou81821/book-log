@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>読書記録</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📘 読書記録</h1>
+
+    <form id="bookForm">
+      <input type="text" id="title" placeholder="タイトル" required>
+      <input type="text" id="author" placeholder="著者" required>
+      <input type="date" id="date" required>
+      <textarea id="notes" placeholder="感想を書く..." rows="4"></textarea>
+      <button type="submit">追加</button>
+    </form>
+
+    <h2>📚 記録一覧</h2>
+    <ul id="bookList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

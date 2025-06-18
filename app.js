@@ -1,5 +1,6 @@
 const form = document.getElementById('bookForm');
 const bookList = document.getElementById('bookList');
+const bookCount = document.getElementById('bookCount');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -12,6 +13,7 @@ form.addEventListener('submit', function (e) {
   const book = { title, author, date, genre, notes };
   addBookToList(book);
   saveBook(book);
+  updateBookCount();
   form.reset();
 });
 
@@ -27,7 +29,13 @@ function saveBook(book) {
   localStorage.setItem('books', JSON.stringify(books));
 }
 
+function updateBookCount() {
+  const books = JSON.parse(localStorage.getItem('books')) || [];
+  bookCount.textContent = `記録件数: ${books.length}件`;
+}
+
 window.onload = function () {
   const books = JSON.parse(localStorage.getItem('books')) || [];
   books.forEach(addBookToList);
+  updateBookCount();
 };

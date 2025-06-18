@@ -10,13 +10,10 @@
   <div class="container">
     <h1>📘 読書記録</h1>
 
-    <!-- 📌 フォーム内に追加 -->
     <form id="bookForm">
       <input type="text" id="title" placeholder="タイトル" required>
       <input type="text" id="author" placeholder="著者" required>
       <input type="date" id="date" required>
-      
-      <!-- 📌 ジャンル選択 -->
       <select id="genre" required>
         <option value="">ジャンルを選択</option>
         <option value="小説">小説</option>
@@ -25,12 +22,12 @@
         <option value="エッセイ">エッセイ</option>
         <option value="その他">その他</option>
       </select>
-      
       <textarea id="notes" placeholder="感想を書く..." rows="4"></textarea>
       <button type="submit">追加</button>
     </form>
 
     <h2>📚 記録一覧</h2>
+    <div id="bookCount"></div>
     <ul id="bookList"></ul>
   </div>
 

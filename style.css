@@ -53,3 +53,10 @@ li {
   border-radius: 5px;
   white-space: pre-line;
 }
+
+select {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

@@ -6,9 +6,10 @@ form.addEventListener('submit', function (e) {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
   const date = document.getElementById('date').value;
+  const genre = document.getElementById('genre').value;
   const notes = document.getElementById('notes').value;
 
-  const book = { title, author, date, notes };
+  const book = { title, author, date, genre, notes };
   addBookToList(book);
   saveBook(book);
   form.reset();
@@ -16,7 +17,7 @@ form.addEventListener('submit', function (e) {
 
 function addBookToList(book) {
   const li = document.createElement('li');
-  li.textContent = `📖 ${book.title} by ${book.author}（${book.date}）\n感想: ${book.notes}`;
+  li.textContent = `📖 ${book.title} (${book.genre}) by ${book.author}（${book.date}）\n感想: ${book.notes}`;
   bookList.appendChild(li);
 }
 
